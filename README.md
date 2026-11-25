@@ -1,13 +1,36 @@
-# Your GitHub Learning Lab Repository for Introducing GitHub
+# GitHub Slideshow (GitHub Learning Lab)
 
-Welcome to **your** repository for your GitHub Learning Lab course. This repository will be used during the different activities that I will be guiding you through. See a word you don't understand? We've included an emoji 📖 next to some key terms. Click on it to see its definition.
+GitHub Learning Lab'ın "Introduction to GitHub" kursu için oluşturulan alıştırma deposu. Kursta issue, dal (branch), commit ve pull request akışı, bu depodaki Jekyll tabanlı slayt gösterisine yeni slayt eklenerek öğrenilir.
 
-Oh! I haven't introduced myself...
+> **Not:** Bu depo GitHub'ın eğitim şablonundan (githubtraining) oluşturuldu; içerik büyük ölçüde GitHub eğitim ekibine aittir. Son değişiklik 2020 yılındadır ve artık güncellenmiyor. Bağımlılıkları eskidir ve bilinen güvenlik açıkları içerebilir.
 
-I'm the GitHub Learning Lab bot and I'm here to help guide you in your journey to learn and master the various topics covered in this course. I will be using Issue and Pull Request comments to communicate with you. In fact, I already added an issue for you to check out.
+## İçerik
 
-![issue tab](https://lab.github.com/public/images/issue_tab.png)
+| Yol | Ne yapar |
+|---|---|
+| `_posts/` | Slaytlar; her Markdown dosyası bir slayttır |
+| `_layouts/`, `_includes/` | Sunum, tek slayt ve yazdırma sayfa şablonları |
+| `_config.yml` | Jekyll ve reveal.js ayarları (tema, geçişler vb.) |
+| `node_modules/reveal.js/` | Slaytları çalıştıran reveal.js 3.9.2. Şablonlar doğrudan bu klasöre bağlandığı için bilerek depoda tutuluyor |
+| `script/` | Kurulum (`setup`), yerel sunucu (`server`) ve derleme kontrolü (`cibuild`) betikleri |
 
-I'll meet you over there, can't wait to get started!
+## Teknolojiler
 
-This course is using the :sparkles: open source project [reveal.js](https://github.com/hakimel/reveal.js/). In some cases we’ve made changes to the history so it would behave during class, so head to the original project repo to learn more about the cool people behind this project.
+- Jekyll (`github-pages` gem'i), Ruby, Bundler
+- reveal.js 3.9.2
+- `html-proofer` (bağlantı kontrolü)
+
+## Çalıştırma
+
+Ruby ve Bundler kurulu olmalıdır.
+
+```
+script/setup
+script/server
+```
+
+Ardından tarayıcıda `http://localhost:4000` adresini açın. Sağ ok tuşuyla slaytlar arasında gezilir.
+
+## Lisans ve teşekkür
+
+Slayt altyapısı açık kaynak [reveal.js](https://github.com/hakimel/reveal.js/) projesine dayanır; projenin kendi geçmişi ve katkıda bulunanları için orijinal depoya bakın. Jekyll şablonunun lisansı `LICENSE` dosyasındadır (MIT).
